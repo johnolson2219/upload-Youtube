@@ -15,7 +15,81 @@
 </head>
 <body>
 
+  <div class="container">
 
+    <div class="row">
+   
+      <div class="col s12 m6">
+
+        <div class="uploadBox">
+          <h3>Video Uploader</h3>
+
+          <div class="first-content row">
+            <div class="file-field input-field">
+              <div class="btn attach-file">
+                <span><i class="material-icons">attach_file</i></span>
+                <input id="fileBox" type="file" accept="video/mp4,video/x-m4v,video/*">
+              </div>
+              <div class="file-path-wrapper">
+                <input id="fileBoxLabel" class="file-path validate" type="text" placeholder="Upload a video file">
+              </div>
+            </div>
+          </div><!-- end first-content -->
+
+
+          <div class="row">
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">text_fields</i>
+              <input id="title" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Title </label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="description" class="materialize-textarea validate"></textarea>
+              <label for="description">Description</label>
+            </div>
+
+          </div><!-- end row -->
+
+          <div class="row">
+            
+            <div class="col s6">
+              <label>Privacy Settings</label>
+              <select id="privacyStatus">
+                <option value="private">Private</option>
+                <option value="public">Public</option>
+              </select>
+            </div>
+
+            <div class="col s6 upload-container">
+             <button class="btn waves-effect waves-light publish" id='uploadButton' type="submit" name="action">Upload
+              <i class="material-icons right">publish</i>
+              </button>
+            </div>
+
+          </div><!-- end row -->
+
+        </div><!-- end uploadBox -->
+        
+      </div><!-- end col cols12 m6 -->
+
+       <div class="col s12 m6">
+
+        <div id="recentUploads">
+          <div class="first-content">
+            <h4>Videos Uploaded</h4>
+            <p id="empty">No videos uploaded yet</p>
+            <ul id="uploads" class="collection"></ul>
+          </div>
+        </div><!-- end recentUploads -->
+
+      </div><!-- end cols12 m6 -->
+
+    </div><!-- end row -->
+
+  </div><!-- end container -->
 
 
   <!-- Javascript Imports -->
