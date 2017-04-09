@@ -1,0 +1,51 @@
+body {
+  background-color: #F9F9F9;
+}
+
+.container {
+  padding-top: 15px;
+  width: 80%;
+}
+
+nav .nav-wrapper {
+  background-color: #161B2D;
+}
+
+.logo-brand {
+  display: block;
+  padding: 15px 0 0 50px;
+}
+
+#recentUploads {
+  padding-left: 20px;
+}
+
+#empty {
+  padding-top: 40px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.first-content {
+  padding-top: 10px;
+}
+
+.btn {
+  background-color: #31A1FF;
+}
+
+.btn.publish {
+  float: right;
+}
+
+.upload-container {
+  margin-top: 20px;
+}
+
+footer.page-footer {
+  background-color: #161B2D;
+}
+
+footer p.grey-text.text-lighten-4.mission a{
+  color: #414D72;
+}
