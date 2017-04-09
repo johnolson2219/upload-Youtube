@@ -1,0 +1,11 @@
+{
+  "name": "youtube_video_uploader",
+  "version": "1.0.0",
+  "description": "Simple app to upload videos using the youtube API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Prieto",
+  "license": "ISC"
+}
