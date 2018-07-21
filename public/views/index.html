@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Video Uploader</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
@@ -13,6 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 </head>
+
 <body>
 
   <div class="navbar-fixed">
@@ -20,30 +22,18 @@
       <div class="nav-wrapper">
         <a href="https://futurism.com/" class="brand-logo left" target="_blank"><img class="logo-brand" src="https://futurism.com/wp-content/themes/futurism/images/futurismlogo.svg?v=3"></a>
       </div>
-    </nav><!-- end nav -->
+    </nav>
+    <!-- end nav -->
   </div>
-    
+
   <div class="container">
 
     <div class="row">
-   
+
       <div class="col s12 m6">
 
         <div class="uploadBox">
           <h3>Video Uploader</h3>
-
-          <div class="first-content row">
-            <div class="file-field input-field">
-              <div class="btn attach-file">
-                <span><i class="material-icons">attach_file</i></span>
-                <input id="fileBox" type="file" accept="video/mp4,video/x-m4v,video/*">
-              </div>
-              <div class="file-path-wrapper">
-                <input id="fileBoxLabel" class="file-path validate" type="text" placeholder="Upload a video file">
-              </div>
-            </div>
-          </div><!-- end first-content -->
-
 
           <div class="row">
 
@@ -54,15 +44,17 @@
             </div>
 
             <div class="input-field col s12">
-              <i class="material-icons prefix">mode_edit</i>
-              <textarea id="description" class="materialize-textarea validate"></textarea>
-              <label for="description">Description</label>
+              <i class="material-icons prefix">text_fields</i>
+              <input id="url" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">URL </label>
             </div>
 
-          </div><!-- end row -->
+
+          </div>
+          <!-- end row -->
 
           <div class="row">
-            
+
             <div class="col s6">
               <label>Privacy Settings</label>
               <select id="privacyStatus">
@@ -72,18 +64,39 @@
             </div>
 
             <div class="col s6 upload-container">
-             <button class="btn waves-effect waves-light publish" id='uploadButton' type="submit" name="action">Upload
-              <i class="material-icons right">publish</i>
+              <button class="btn waves-effect waves-light publish" id='addButton'>ADD VIDEO
+              <i class="material-icons right">add</i>
               </button>
             </div>
 
-          </div><!-- end row -->
+          </div>
+          <!-- end row -->
 
-        </div><!-- end uploadBox -->
-        
-      </div><!-- end col cols12 m6 -->
+          <div class="row">
+            <div class="col s12">
+              <div id="videoQueue">
+                <div class="first-content">
+                  <h4>Video Queue</h4>
+                  <p id="emptyQueue">No videos added</p>
+                  <ul id="queue" class="collection"></ul>
+                </div>
+              </div>
+              <!-- end videoQueue -->
+            </div>
+             <div class="col s12 upload-container">
+              <button class="btn waves-effect waves-light publish" id='uploadButton' type="submit" name="action">START UPLOAD
+              <i class="material-icons right">publish</i>
+              </button>
+            </div>
+          </div>
 
-       <div class="col s12 m6">
+        </div>
+        <!-- end uploadBox -->
+
+      </div>
+      <!-- end col cols12 m6 -->
+
+      <div class="col s12 m6">
 
         <div id="recentUploads">
           <div class="first-content">
@@ -91,13 +104,17 @@
             <p id="empty">No videos uploaded yet</p>
             <ul id="uploads" class="collection"></ul>
           </div>
-        </div><!-- end recentUploads -->
+        </div>
+        <!-- end recentUploads -->
 
-      </div><!-- end cols12 m6 -->
+      </div>
+      <!-- end cols12 m6 -->
 
-    </div><!-- end row -->
+    </div>
+    <!-- end row -->
 
-  </div><!-- end container -->
+  </div>
+  <!-- end container -->
 
   <footer class="page-footer">
     <div class="container">
@@ -107,24 +124,25 @@
           <p class="grey-text text-lighten-4 mission"><a href="https://futurism.com/about">Our mission is to empower our readers and drive the development of transformative technologies towards maximizing human potential -></a></p>
         </div>
         <div class="col l4 offset-l2 s12">
-        <img width="150" src="https://futurism.com/wp-content/themes/futurism/images/futurismlogotaglinefooter.png">
+          <img width="150" src="https://futurism.com/wp-content/themes/futurism/images/futurismlogotaglinefooter.png">
           <ul>
             <li><a class="grey-text text-lighten-3" href="https://futurism.com/about">About</a></li>
             <li><a class="grey-text text-lighten-3" href="https://futurism.com/faq/">FAQ</a></li>
             <li><a class="grey-text text-lighten-3" href="https://futurism.com/dmca-policy/">DMCA Policy</a></li>
             <li><a class="grey-text text-lighten-3" href="https://futurism.com/privacy/">Privacy Policy</a></li>
-            <p> <a  class="grey-text text-lighten-3"  href="http://creativecommons.org/licenses/by-nc/4.0/"><img width="70" src="https://futurism.com/wp-content/themes/futurism/images/cc.svg"></a></p>
+            <p> <a class="grey-text text-lighten-3" href="http://creativecommons.org/licenses/by-nc/4.0/"><img width="70" src="https://futurism.com/wp-content/themes/futurism/images/cc.svg"></a></p>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2017 Copyright 
-      <a class="grey-text text-lighten-4 right" href="http://www.adrianprieto.com/pages/portfolio" target="_blank">Adrian Prieto</a>
+        © 2017 Copyright
+        <a class="grey-text text-lighten-4 right" href="http://www.adrianprieto.com/pages/portfolio" target="_blank">Adrian Prieto</a>
       </div>
     </div>
-  </footer><!-- end footer -->
+  </footer>
+  <!-- end footer -->
 
 
   <!-- Javascript Imports -->
@@ -133,4 +151,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
   <script src="/js/index.js"></script>
 </body>
+
 </html>

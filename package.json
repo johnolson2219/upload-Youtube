@@ -9,9 +9,13 @@
   "author": "Adrian Prieto",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bug-killer": "^4.4.4",
     "cli-spinner": "^0.2.6",
+    "download": "^7.1.0",
+    "download-file": "^0.1.5",
     "express": "^4.15.2",
+    "express-session": "^1.15.6",
     "opn": "^4.0.2",
     "r-json": "^1.2.7",
     "socket.io": "^1.7.3",
