@@ -18,6 +18,8 @@
     "express-session": "^1.15.6",
     "opn": "^4.0.2",
     "r-json": "^1.2.7",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
     "socket.io": "^1.7.3",
     "youtube-api": "^2.0.8"
   }

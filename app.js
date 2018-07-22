@@ -16,7 +16,9 @@ session = require("express-session"),
   download = require('download');
 var bodyParser = require('body-parser')
 
-spinner.setSpinnerString('|/-\\')
+spinner.setSpinnerString('|/-\\');
+
+const R = require("request-promise");
 
 
 /*****************************************************
@@ -89,6 +91,22 @@ app.post('/start', function(req, res, next) {
     res.end("uploading started");
   } else res.end("please authenticate first");
 });
+
+
+app.post("/byChiaSlug", async (req, res)=>{
+  const chiaSlug = req.body.slug;
+  const response = await R({
+    uri: "https://runkit.io/shahidkamal/5ab758fb82aa6a0012eb3f8a/branches/master/" + chiaSlug,
+    json: true
+  });
+    
+   prepareDownload({
+      socket: app.locals.socket,
+      videos: response.result, 
+      tokens: req.session.tokens
+    }).then(d=>console.log(d)).catch(console.error);
+   res.send("started");
+})
 
 
 app.get('/home', async function(req, res) {

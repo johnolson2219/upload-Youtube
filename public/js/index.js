@@ -2,10 +2,12 @@ $(function() {
   const socket = io();
   var uploadButton = $('#uploadButton'),
     addButton = $("#addButton"),
+    bySlugBtn = $("#bySlugBtn"),
     defaultText, title = $('#title'),
     videos = [],
     url = $('#url'),
     uploads = $('#uploads'),
+    slug = $('#slug'),
     queueContainer = $("#videoQueue"),
     privacyStatus = $('#privacyStatus');
 
@@ -19,6 +21,12 @@ $(function() {
    ****************************************************/
 
   $('select').material_select();
+  
+  bySlugBtn.click(e=>{
+    $.post("/byChiaSlug", {slug: slug.val()}, (data)=>{
+      Materialize.toast(data);
+    })
+  })
 
   addButton.click(function(e) {
     const video = {
